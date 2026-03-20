@@ -40,10 +40,6 @@ cd mimiclaw
 idf.py set-target esp32s3
 ```
 
-<details>
-
-</details>
-
 ### Configure
 
 MimiClaw uses a **two-layer config** system: build-time defaults in `mimi_secrets.h`, with runtime overrides via the serial CLI. CLI values are stored in NVS flash and take priority over build-time values.
@@ -70,25 +66,14 @@ Then build and flash:
 
 ```bash
 # Clean build (required after any mimi_secrets.h change)
-idf.py fullclean && idf.py build
-
-# Find your serial port
-ls /dev/cu.usb*          # macOS
-ls /dev/ttyACM*          # Linux
+idf.py fullclean
+idf.py build
 
 # Flash and monitor (replace PORT with your port)
-# USB adapter: likely /dev/cu.usbmodem11401 (macOS) or /dev/ttyACM0 (Linux)
 idf.py -p PORT flash monitor
 ```
 
 > **Important: Plug into the correct USB port!** Most ESP32-S3 boards have two USB-C ports. You must use the one labeled **USB** (native USB Serial/JTAG), **not** the one labeled **COM** (external UART bridge). Plugging into the wrong port will cause flash/monitor failures.
->
-> <details>
-> <summary>Show reference photo</summary>
->
-> <img src="assets/esp32s3-usb-port.jpg" alt="Plug into the USB port, not COM" width="480" />
->
-> </details>
 
 ### CLI Commands (via UART/COM port)
 
@@ -224,10 +209,6 @@ Technical details live in the `docs/` folder:
 - **[docs/TODO.md](docs/TODO.md)** — feature gap tracker and roadmap
 - **[docs/WIFI_ONBOARDING_AP.md](docs/WIFI_ONBOARDING_AP.md)** — how the local `MimiClaw-XXXX` onboarding/admin AP flow works
 - **[docs/tool-setup/](docs/tool-setup/README.md)** — configuration guides for external service integrations (Tavily, etc.)
-
-## Contributing
-
-Please read **[CONTRIBUTING.md](CONTRIBUTING.md)** before opening issues or pull requests.
 
 
 ## License
