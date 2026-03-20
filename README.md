@@ -1,19 +1,5 @@
 # MimiClaw: Pocket AI Assistant on a $5 Chip
 
-<p align="center">
-  <img src="assets/banner.png" alt="MimiClaw" width="500" />
-</p>
-
-<p align="center">
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
-  <a href="https://deepwiki.com/memovai/mimiclaw"><img src="https://img.shields.io/badge/DeepWiki-mimiclaw-blue.svg" alt="DeepWiki"></a>
-  <a href="https://discord.gg/r8ZxSvB8Yr"><img src="https://img.shields.io/badge/Discord-mimiclaw-5865F2?logo=discord&logoColor=white" alt="Discord"></a>
-  <a href="https://x.com/ssslvky"><img src="https://img.shields.io/badge/X-@ssslvky-black?logo=x" alt="X"></a>
-</p>
-
-<p align="center">
-  <strong><a href="README.md">English</a> | <a href="README_CN.md">中文</a> | <a href="README_JA.md">日本語</a></strong>
-</p>
 
 **The world's first AI assistant(OpenClaw) on a $5 chip. No Linux. No Node.js. Just pure C**
 
@@ -40,7 +26,7 @@ You send a message on Telegram. The ESP32-S3 picks it up over WiFi, feeds it int
 - An **ESP32-S3 dev board** with 16 MB flash and 8 MB PSRAM (e.g. Xiaozhi AI board, ~$10)
 - A **USB Type-C cable**
 - A **Telegram bot token** — talk to [@BotFather](https://t.me/BotFather) on Telegram to create one
-- An **Anthropic API key** — from [console.anthropic.com](https://console.anthropic.com), or an **OpenAI API key** — from [platform.openai.com](https://platform.openai.com)
+- An **OpenRouter API key** — from [https://openrouter.ai](https://openrouter.ai)
 
 ### Install
 
@@ -48,68 +34,13 @@ You send a message on Telegram. The ESP32-S3 picks it up over WiFi, feeds it int
 # You need ESP-IDF v5.5+ installed first:
 # https://docs.espressif.com/projects/esp-idf/en/v5.5.2/esp32s3/get-started/
 
-git clone https://github.com/memovai/mimiclaw.git
+git clone https://github.com/hkjansonchan/mimiclaw
 cd mimiclaw
 
 idf.py set-target esp32s3
 ```
 
 <details>
-<summary>Ubuntu Install</summary>
-
-Recommended baseline:
-
-- Ubuntu 22.04/24.04
-- Python >= 3.10
-- CMake >= 3.16
-- Ninja >= 1.10
-- Git >= 2.34
-- flex >= 2.6
-- bison >= 3.8
-- gperf >= 3.1
-- dfu-util >= 0.11
-- `libusb-1.0-0`, `libffi-dev`, `libssl-dev`
-
-Install and build on Ubuntu:
-
-```bash
-sudo apt-get update
-sudo apt-get install -y git wget flex bison gperf python3 python3-pip python3-venv \
-  cmake ninja-build ccache libffi-dev libssl-dev dfu-util libusb-1.0-0
-
-./scripts/setup_idf_ubuntu.sh
-./scripts/build_ubuntu.sh
-```
-
-</details>
-
-<details>
-<summary>macOS Install</summary>
-
-Recommended baseline:
-
-- macOS 12/13/14
-- Xcode Command Line Tools
-- Homebrew
-- Python >= 3.10
-- CMake >= 3.16
-- Ninja >= 1.10
-- Git >= 2.34
-- flex >= 2.6
-- bison >= 3.8
-- gperf >= 3.1
-- dfu-util >= 0.11
-- `libusb`, `libffi`, `openssl`
-
-Install and build on macOS:
-
-```bash
-xcode-select --install
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-./scripts/setup_idf_macos.sh
-./scripts/build_macos.sh
-```
 
 </details>
 
@@ -301,9 +232,9 @@ Please read **[CONTRIBUTING.md](CONTRIBUTING.md)** before opening issues or pull
 
 ## License
 
-MIT
+GNU GPLv3
 
 ## Acknowledgments
 
-Inspired by [OpenClaw](https://github.com/openclaw/openclaw) and [Nanobot](https://github.com/HKUDS/nanobot). MimiClaw reimplements the core AI agent architecture for embedded hardware — no Linux, no server, just a $5 chip.
+Inspired by [OpenClaw](https://github.com/openclaw/openclaw), [Nanobot](https://github.com/HKUDS/nanobot) and real [Mimiclaw(https://github.com/memovai/mimiclaw). MimiClaw reimplements the core AI agent architecture for embedded hardware — no Linux, no server, just a $5 chip.
 
