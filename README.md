@@ -298,13 +298,6 @@ Technical details live in the `docs/` folder:
 
 Please read **[CONTRIBUTING.md](CONTRIBUTING.md)** before opening issues or pull requests.
 
-## Contributors
-
-Thanks to everyone who has contributed to MimiClaw.
-
-<a href="https://github.com/memovai/mimiclaw/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=memovai/mimiclaw" alt="MimiClaw contributors" />
-</a>
 
 ## License
 
@@ -314,12 +307,3 @@ MIT
 
 Inspired by [OpenClaw](https://github.com/openclaw/openclaw) and [Nanobot](https://github.com/HKUDS/nanobot). MimiClaw reimplements the core AI agent architecture for embedded hardware — no Linux, no server, just a $5 chip.
 
-## Star History
-
-<a href="https://www.star-history.com/?repos=memovai%2Fmimiclaw&type=date&legend=top-left">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/image?repos=memovai/mimiclaw&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/image?repos=memovai/mimiclaw&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/image?repos=memovai/mimiclaw&type=date&legend=top-left" />
- </picture>
-</a>
